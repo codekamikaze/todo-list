@@ -1,9 +1,9 @@
 .header {
-    width: 90%;
     max-width: 800px;
     margin: auto;
+    padding: 10px;
 }
 
 .header__header {
-
+    font-weight: 900px;
 }
