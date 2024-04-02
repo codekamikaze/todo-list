@@ -9,10 +9,6 @@ html {
 }
 
 .body {
-    background-color: #cccccc;
-    font-family: "Roboto", sans-serif;
-}
-
-.main {
-    padding: 10px;
+    font-family: "Montserrat", sans-serif;
+    background-color: #eeeeee;
 }

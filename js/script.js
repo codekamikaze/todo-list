@@ -1,5 +1,14 @@
 {
-    const tasks = [];
+    const tasks = [
+        {
+            content: "kupić czekoladę",
+            done: false,
+        },
+        {
+            content: "zatankować samochód",
+            done: true,
+        },
+    ];
 
     const addNewTask = (newTaskContent) => {
         tasks.push({
@@ -55,24 +64,18 @@
         bindEvents();
     }
 
-    const onFormReset = () => {
-        const resetForm = document.querySelector(".js-form");
-
-        resetForm.reset();
-    };
-
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const newTaskContent = document.querySelector(".js-form__input").value.trim();
+        const newTaskElement = document.querySelector(".js-form__input");
+        const newTaskContent = newTaskElement.value.trim();
 
-        onFormReset();
-
-        if (newTaskContent === "") {
-            return;
+        if (newTaskContent !== "") {
+            addNewTask(newTaskContent);
+            newTaskElement.value= "";
         }
-
-        addNewTask(newTaskContent);
+        
+        newTaskElement.focus();
     };
 
     const init = () => {
